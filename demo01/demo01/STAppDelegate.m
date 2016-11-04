@@ -6,17 +6,25 @@
 //  Copyright © 2016年 bokeadmin. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "STAppDelegate.h"
+#import "STMainViewController.h"
 
-@interface AppDelegate ()
+@interface STAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation STAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Init root view controller of the application
+    STMainViewController *vc = [[STMainViewController alloc] init];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
